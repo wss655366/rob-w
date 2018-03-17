@@ -1,2 +1,2 @@
-# mongodb.golang.com
-The mongodb instance based on golang
+# project
+Go and MongoDB
