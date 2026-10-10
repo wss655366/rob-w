@@ -1,199 +1,220 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2026 | Hexo</title><meta name="author" content="wss655366"><meta name="copyright" content="wss655366"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="2026">
-<meta property="og:url" content="http://example.com/archives/2026/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
-<meta property="article:author" content="wss655366">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/rob-w/img/favicon.png"><link rel="canonical" href="http://example.com/archives/2026/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/rob-w/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        const data = { value }
-
-        if (ttl != null) {
-          data.expiry = Date.now() + ttl * 86400000
-        }
-
-        localStorage.setItem(key, JSON.stringify(data))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return
-
-        try {
-          const data = JSON.parse(itemStr)
-
-          if (data.expiry && Date.now() > data.expiry) {
-            localStorage.removeItem(key)
-            return
-          }
-
-          return data.value
-        } catch {
-          localStorage.removeItem(key)
-        }
-      }
-    }
-
-    const scriptCache = new Map()
-    const cssCache = new Map()
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => {
-        if (scriptCache.has(url)) {
-          return scriptCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const script = document.createElement('script')
-
-          script.src = url
-          script.async = true
-
-          for (const key in attr) {
-            script.setAttribute(key, attr[key])
-          }
-
-          script.onload = resolve
-          script.onerror = reject
-
-          document.head.appendChild(script)
-        })
-
-        scriptCache.set(url, promise)
-
-        return promise
-      },
-      getCSS: (url, id) => {
-        if (cssCache.has(url)) {
-          return cssCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const link = document.createElement('link')
-
-          link.rel = 'stylesheet'
-          link.href = url
-
-          if (id) {
-            link.id = id
-          }
-
-          link.onload = resolve
-          link.onerror = reject
-
-          document.head.appendChild(link)
-        })
-
-        cssCache.set(url, promise)
-
-        return promise
-      },
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
-  
-      
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-      const activateDarkMode = () => {
-        document.documentElement.dataset.theme = 'dark'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.dataset.theme = 'light'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- favicon -->
     
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+        <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    
+    <!-- locale -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <!--Description-->
+    
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="wss655366">
+    <!-- og:description -->
+    <meta name="og:description" content="">
+    <!-- color -->
+    <meta name="theme-color" content="#ffffff">
+    <!--Author-->
+    
+        <meta name="author" content="wss655366">
+    
+    <!--Open Graph Title-->
+    
+    <!--Open Graph type-->
+    <meta property="og:type" content="website"/>
+    <!--Page Cover-->
+    
+    <meta property="og:image" content="http://example.com/rob-w/img/450x450/seira.jpg">
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo"/>
+    <!-- Title -->
+    
+    <title>All Post - Hexo</title>
+    <!-- framework CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" rel="stylesheet">    
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    
+<link rel="stylesheet" href="/rob-w/css/index.css">
+
+    
+<link rel="stylesheet" href="/rob-w/css/component.css">
+
+    
+<script src="/rob-w/js/modernizr.custom.js"></script>
+
+    <!-- jquery -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+    <body class="has-background-light">
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section"></div>
+        </div>
+        <nav class="navbar is-fixed-top is-white has-bg-shadow" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/rob-w/">
+                <img src="/rob-w/img/logo2.svg" height="28" alt="logo">
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                
+                    <a class="navbar-item" href="/about">
+                    <!-- <span class="icon"><i class="fas fa-about"> </i></span> -->
+                    &nbsp;About </a>
+                
+                    <a class="navbar-item" href="/friends">
+                    <!-- <span class="icon"><i class="fas fa-friends"> </i></span> -->
+                    &nbsp;Friends </a>
+                
+                
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            
+                            
+                                <a class="button has-transparent-bg" target="_blank" rel="noopener" href="https://gitlab.com/sira313"><span class="icon"> <i class="fab fa-gitlab"></i> </span></a>
+                            
+                            
+                            
+                                <a class="button has-transparent-bg" target="_blank" rel="noopener" href="https://twitter.com/aflasio"><span class="icon"> <i class="fab fa-twitter"></i> </span></a>
+                            
+                            
+                            
+                                <a class="button has-transparent-bg" target="_blank" rel="noopener" href="https://facebook.com/aflasio.art"><span class="icon"> <i class="fab fa-facebook"></i> </span></a>
+                            
+                            
+                            
+                                <a class="button has-transparent-bg" href="mailto:sira.argia@gmail.com" title="email"> <span class="icon"><i class="fas fa-envelope"></i> </span></a>
+                            
+                            
+                            
+                                <a class="button has-transparent-bg" target="_blank" rel="noopener" href="https://t.me/aflasio"><span class="icon"> <i class="fab fa-telegram"></i> </span></a>
+                            
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+        <div class="container">
+            <div class="hero">
+    <div class="hero-body has-text-centered">
+    <div class="box has-bg-shadow margin-bottom-8" style="border-radius: 10px">
+  <div class="media">
+    <figure class="image">
+      <img src="/rob-w/img/cover.jpg" style="border-top-left-radius:10px;border-top-right-radius:10px;" alt="Hexo">
+    </figure>
+  </div>
+  <figure id="profile_pic" class="image is-128x128 has-image-centered">
+    <img class="is-rounded" src="/rob-w/img/450x450/seira.jpg" alt="profile pic" style="background: white;padding: 4px">
+  </figure>
+  <div class="profile_info">
+    <h1 class="title is-3"> Hexo </h1>
+    <h2 class="subtitle is-6" style="margin-bottom: 0.8rem">  </h2>
+    <span class="button is-static is-small" style="border: unset"><span class="icon"><i class="fas fa-map-marker-alt"></i></span>&nbsp;Indonesia, West Borneo</span>
+  </div>
+</div>
+
+
+        <ul class="grid effect-8 main" id="grid">
+            
+                <li>   
+    <div class="work">
+        <figure class="image has-shadow-hover has-rounded-corner">
+            <a href="/rob-w/2026/10/10/hello-world/">
+                <img src="/img/seira.jpg" class="has-rounded-corner" alt="Hello World"/>
+                <div class="caption has-rounded-corner">
+                    <div class="work_title">
+                        <h1 class="title is-6">Hello World</h1>
+                    </div>
+                </div>
+            </a>
+        </figure>
+    </div>
+</li>
+
+            
+        </ul>
         
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
-    
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-  
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/rob-w/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: 'Copy Successful',
-    error: 'Copy Failed',
-    noSupport: 'Browser Not Supported'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: 'Just now',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
-    buttonText: 'Load More'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '2026',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'archive'
-}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/rob-w/"><span class="site-name">Hexo</span></a></span><div id="menus"></div></nav><div id="page-site-info"><h1 id="site-title">2026</h1></div></header><main class="layout" id="content-inner"><div id="archive"><div class="article-sort-title">All Articles - 1</div><div class="article-sort"><div class="article-sort-item year">2026</div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2026-10-10T13:06:41.709Z" title="Created 2026-10-10 21:06:41">2026-10-10</time></div><a class="article-sort-item-title" href="/rob-w/2026/10/10/hello-world/" title="Hello World">Hello World</a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/rob-w/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/rob-w/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wss655366</div><div class="author-info-description"></div><div class="site-data"><a href="/rob-w/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/rob-w/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/rob-w/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/rob-w/2026/10/10/hello-world/" title="Hello World">Hello World</a><time datetime="2026-10-10T13:06:41.709Z" title="Created 2026-10-10 21:06:41">2026-10-10</time></div></div></div></div><div class="card-widget card-archives">
-    <div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div>
-  
-    <ul class="card-archive-list">
-      
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/rob-w/archives/2026/10/">
-            <span class="card-archive-list-date">
-              October 2026
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
-      
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-10-10T14:41:19.437Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By wss655366</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/rob-w/js/utils.js?v=5.7.0"></script><script src="/rob-w/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+    </div>
+</div>
+        </div>
+    </body>
+    <footer>
+        
+<div class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2018-2019 <a href="/rob-w/">Hexo</a><br>
+        Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> and <a target="_blank" rel="noopener" href="https://bulma.io">Bulma</a><br>
+        Theme source code is on <a target="_blank" rel="noopener" href="https://github.com/sira313/hexo-theme-griddy">Github</a>
+      </p>
+    </div>
+</div>
+    </footer>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!-- Gallery -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!-- masonry for gallery -->
+
+<script src="/rob-w/js/app.js"></script>
+
+
+<script src="/rob-w/js/masonry.pkgd.min.js"></script>
+
+
+<script src="/rob-w/js/imagesloaded.js"></script>
+
+
+<script src="/rob-w/js/classie.js"></script>
+
+
+<script src="/rob-w/js/AnimOnScroll.js"></script>
+
+
+<script src="/rob-w/js/AnimOnScroll.js"></script>
+
+<script>
+ var grid = document.getElementById( 'grid' );
+ if (grid) {
+	new AnimOnScroll(grid, {
+		minDuration : 0.4,
+		maxDuration : 0.7,
+		viewportFactor : 0.2
+	} );
+}
+</script>
+<!-- fontawesome -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/js/all.min.js"></script>
+<!-- comments -->
+
+
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-128493937-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</html>

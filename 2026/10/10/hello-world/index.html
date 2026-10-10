@@ -1,206 +1,147 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hello World | Hexo</title><meta name="author" content="wss655366"><meta name="copyright" content="wss655366"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2026/10/10/hello-world/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/img/butterfly-icon.png">
-<meta property="article:published_time" content="2026-10-10T13:06:41.709Z">
-<meta property="article:modified_time" content="2026-10-10T13:06:41.709Z">
-<meta property="article:author" content="wss655366">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/butterfly-icon.png"><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Hello World",
-  "url": "http://example.com/2026/10/10/hello-world/",
-  "image": "http://example.com/img/butterfly-icon.png",
-  "datePublished": "2026-10-10T13:06:41.709Z",
-  "dateModified": "2026-10-10T13:06:41.709Z",
-  "author": [
-    {
-      "@type": "Person",
-      "name": "wss655366",
-      "url": "http://example.com"
-    }
-  ]
-}</script><link rel="shortcut icon" href="/rob-w/img/favicon.png"><link rel="canonical" href="http://example.com/2026/10/10/hello-world/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/rob-w/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        const data = { value }
-
-        if (ttl != null) {
-          data.expiry = Date.now() + ttl * 86400000
-        }
-
-        localStorage.setItem(key, JSON.stringify(data))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return
-
-        try {
-          const data = JSON.parse(itemStr)
-
-          if (data.expiry && Date.now() > data.expiry) {
-            localStorage.removeItem(key)
-            return
-          }
-
-          return data.value
-        } catch {
-          localStorage.removeItem(key)
-        }
-      }
-    }
-
-    const scriptCache = new Map()
-    const cssCache = new Map()
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => {
-        if (scriptCache.has(url)) {
-          return scriptCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const script = document.createElement('script')
-
-          script.src = url
-          script.async = true
-
-          for (const key in attr) {
-            script.setAttribute(key, attr[key])
-          }
-
-          script.onload = resolve
-          script.onerror = reject
-
-          document.head.appendChild(script)
-        })
-
-        scriptCache.set(url, promise)
-
-        return promise
-      },
-      getCSS: (url, id) => {
-        if (cssCache.has(url)) {
-          return cssCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const link = document.createElement('link')
-
-          link.rel = 'stylesheet'
-          link.href = url
-
-          if (id) {
-            link.id = id
-          }
-
-          link.onload = resolve
-          link.onerror = reject
-
-          document.head.appendChild(link)
-        })
-
-        cssCache.set(url, promise)
-
-        return promise
-      },
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
-  
-      
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-      const activateDarkMode = () => {
-        document.documentElement.dataset.theme = 'dark'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.dataset.theme = 'light'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- favicon -->
     
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+        <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    
+    <!-- locale -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <!--Description-->
+    
+    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="keywords" content="">
+    <meta name="author" content="wss655366">
+    <!-- og:description -->
+    <meta name="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <!-- color -->
+    <meta name="theme-color" content="#ffffff">
+    <!--Author-->
+    
+        <meta name="author" content="wss655366">
+    
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Hello World"/>
+    
+    <!--Open Graph type-->
+    <meta property="og:type" content="website"/>
+    <!--Page Cover-->
+    
+    <meta property="og:image" content="http://example.com/rob-w/img/450x450/seira.jpg">
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo"/>
+    <!-- Title -->
+    
+    <title>Hello World - Hexo</title>
+    <!-- framework CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" rel="stylesheet">    
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    
+<link rel="stylesheet" href="/rob-w/css/index.css">
+
+    
+<link rel="stylesheet" href="/rob-w/css/component.css">
+
+    
+<script src="/rob-w/js/modernizr.custom.js"></script>
+
+    <!-- jquery -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+    <body class="has-background-light">
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section"></div>
+        </div>
+        <nav class="navbar is-fixed-top is-white has-bg-shadow" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/rob-w/">
+                <img src="/rob-w/img/logo2.svg" height="28" alt="logo">
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                
+                    <a class="navbar-item" href="/about">
+                    <!-- <span class="icon"><i class="fas fa-about"> </i></span> -->
+                    &nbsp;About </a>
+                
+                    <a class="navbar-item" href="/friends">
+                    <!-- <span class="icon"><i class="fas fa-friends"> </i></span> -->
+                    &nbsp;Friends </a>
+                
+                
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            
+                            
+                                <a class="button has-transparent-bg" target="_blank" rel="noopener" href="https://gitlab.com/sira313"><span class="icon"> <i class="fab fa-gitlab"></i> </span></a>
+                            
+                            
+                            
+                                <a class="button has-transparent-bg" target="_blank" rel="noopener" href="https://twitter.com/aflasio"><span class="icon"> <i class="fab fa-twitter"></i> </span></a>
+                            
+                            
+                            
+                                <a class="button has-transparent-bg" target="_blank" rel="noopener" href="https://facebook.com/aflasio.art"><span class="icon"> <i class="fab fa-facebook"></i> </span></a>
+                            
+                            
+                            
+                                <a class="button has-transparent-bg" href="mailto:sira.argia@gmail.com" title="email"> <span class="icon"><i class="fas fa-envelope"></i> </span></a>
+                            
+                            
+                            
+                                <a class="button has-transparent-bg" target="_blank" rel="noopener" href="https://t.me/aflasio"><span class="icon"> <i class="fab fa-telegram"></i> </span></a>
+                            
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+        <div class="container">
+            <section class="hero is-fullheight" style="margin-top:3.25rem">
+</div>
+  <div class="hero-body" style="padding-bottom: 0">
+    <div class="box box-mobile has-box-shadow" style="width: 100%">
+      <div class="media" style="margin-bottom:1em">
+        <figure class="media-left">
+          <p class="image is-48x48">
+            <img class="is-rounded" src="/rob-w/img/450x450/seira.jpg" alt="profile pic">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content" style="margin-top:5px">
+            <h1 class="title is-6">Hello World</h1>
+            <h2 class="subtitle is-size-7 has-text-grey">
+              <span class="icon is-small"><i class="fas fa-calendar"></i></span> 2026-10-10
+              &nbsp;
+              <span class="icon is-small"><i class="fas fa-user"></i></span> wss655366
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <!-- Gallery -->
         
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
-    
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-  
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/rob-w/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: 'Copy Successful',
-    error: 'Copy Failed',
-    noSupport: 'Browser Not Supported'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: 'Just now',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
-    buttonText: 'Load More'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Hello World',
-  isHighlightShrink: false,
-  isToc: true,
-  pageType: 'post'
-}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/rob-w/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/rob-w/"><span class="site-name">Hello World</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">Hello World</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-10-10T13:06:41.709Z" title="Created 2026-10-10 21:06:41">2026-10-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-10-10T13:06:41.709Z" title="Updated 2026-10-10 21:06:41">2026-10-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+        <div class="post">
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -213,4 +154,114 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">wss655366</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2026/10/10/hello-world/">http://example.com/2026/10/10/hello-world/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/rob-w/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/rob-w/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/rob-w/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wss655366</div><div class="author-info-description"></div><div class="site-data"><a href="/rob-w/archives/"><div class="headline">Articles</div><div class="length-num">1</div></a><a href="/rob-w/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/rob-w/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/rob-w/2026/10/10/hello-world/" title="Hello World">Hello World</a><time datetime="2026-10-10T13:06:41.709Z" title="Created 2026-10-10 21:06:41">2026-10-10</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By wss655366</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/rob-w/js/utils.js?v=5.7.0"></script><script src="/rob-w/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+        </div>
+        <!-- Tags -->
+        <div class="tags" style="margin-top: 0.6em;">
+           
+        </div>
+        
+<nav class="pagination is-centered buttons" role="navigation" aria-label="pagination" style="margin-top:10px;justify-content: space-between">
+  
+    <a class="pagination-previous button is-light" title="This is the latest post" disabled><span class="icon"><i class="fas fa-angle-left"></i></i></span>&nbsp;Latest</a>
+  
+  
+    <a class="pagination-next button is-light" title="This is the very oldest post" disabled>Earlier&nbsp;<span class="icon"><i class="fas fa-angle-right"></i></a>
+    
+ </nav> 
+   
+      </div>      
+    </div>       
+  </div>
+  <!-- comments -->
+  
+
+
+
+
+    <div class="hero-foot">
+        <div class="box box-mobile has-box-shadow" style="width: 100%">
+            <div id="valine"></div>
+            <!-- valine comment -->
+            <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+            <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+            <script>
+            new Valine({
+                el: '#valine' ,
+                notify:false,
+                verify:false,
+                app_id: '6jbQfaaH3EJezmsqw43NCcNa-gzGzoHsz',
+                app_key: '5AsBAiusJURpbNDHTP4LHwA6',
+                placeholder: 'Leave comment',
+                path:window.location.pathname,
+                lang:'en',
+                avatar:'mm' 
+            });
+            </script>
+        </div>
+    </div>
+  
+</section>
+        </div>
+    </body>
+    <footer>
+        
+<div class="footer">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2018-2019 <a href="/rob-w/">Hexo</a><br>
+        Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> and <a target="_blank" rel="noopener" href="https://bulma.io">Bulma</a><br>
+        Theme source code is on <a target="_blank" rel="noopener" href="https://github.com/sira313/hexo-theme-griddy">Github</a>
+      </p>
+    </div>
+</div>
+    </footer>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!-- Gallery -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!-- masonry for gallery -->
+
+<script src="/rob-w/js/app.js"></script>
+
+
+<script src="/rob-w/js/masonry.pkgd.min.js"></script>
+
+
+<script src="/rob-w/js/imagesloaded.js"></script>
+
+
+<script src="/rob-w/js/classie.js"></script>
+
+
+<script src="/rob-w/js/AnimOnScroll.js"></script>
+
+
+<script src="/rob-w/js/AnimOnScroll.js"></script>
+
+<script>
+ var grid = document.getElementById( 'grid' );
+ if (grid) {
+	new AnimOnScroll(grid, {
+		minDuration : 0.4,
+		maxDuration : 0.7,
+		viewportFactor : 0.2
+	} );
+}
+</script>
+<!-- fontawesome -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/js/all.min.js"></script>
+<!-- comments -->
+
+
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-128493937-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</html>
