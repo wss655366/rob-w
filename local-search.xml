@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>我的第一篇文章</title>
+    <link href="/rob-w/2026/10/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <url>/rob-w/2026/10/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="你好，世界"><a href="#你好，世界" class="headerlink" title="你好，世界"></a>你好，世界</h2><p>这是我的 Hexo 博客第一篇文章。</p><h3 id="关于这个博客"><a href="#关于这个博客" class="headerlink" title="关于这个博客"></a>关于这个博客</h3><ul><li>主题：Fluid</li><li>托管：GitHub Pages</li><li>域名：<a href="https://wss655366.github.io/rob-w/">https://wss655366.github.io/rob-w/</a></li></ul><h3 id="怎么写文章"><a href="#怎么写文章" class="headerlink" title="怎么写文章"></a>怎么写文章</h3><ol><li>运行 <code>hexo new &quot;文章标题&quot;</code></li><li>在 <code>source/_posts/</code> 下找到对应的 <code>.md</code> 文件</li><li>用 Markdown 写内容</li><li>运行 <code>hexo g -d</code> 生成并部署</li></ol><h3 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h3><ul><li>写第一篇正式文章</li><li>配置个人信息（在 <code>_config.fluid.yml</code> 里）</li><li>换个自定义域名</li></ul><hr><p><em>发布于 2026 年 10 月</em></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>博客</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/rob-w/2026/10/10/hello-world/"/>
     <url>/rob-w/2026/10/10/hello-world/</url>
